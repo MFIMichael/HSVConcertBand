@@ -6,23 +6,24 @@ var Search = React.createClass({
     cb: React.PropTypes.func.isRequired
   },
   handleSubmit (){
-    var url = '/compositions?callback=cb';
+    var url = '/compositions';
     /*
     For Example,
     //`https://itunes.apple.com/search?term=${this.refs.searchInput.getDOMNode().value}&entity=${this.refs.selectInput.getDOMNode().value}&callback=cb`;
     */
     $.ajax({
       url: url,
-
-      dataType: 'JSONP',
+      dataType: 'JSON',
       error: function(error){
         console.log('error on post:' + error);
       },
       success: function(data){
+        //console.log('success: ' + data);
         this.refs.searchInput.getDOMNode().value = '';
-        this.props.cb(data.results);
+        this.props.cb(data);
       }.bind(this)
     })
+
   },
   handleReturn(e){
     if(e.keyCode === 13) this.handleSubmit();
