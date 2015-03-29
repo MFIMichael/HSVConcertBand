@@ -6,7 +6,7 @@ var Search = React.createClass({
     cb: React.PropTypes.func.isRequired
   },
   handleSubmit (){
-    var url = '';
+    var url = '/compositions?callback=cb';
     /*
     For Example,
     //`https://itunes.apple.com/search?term=${this.refs.searchInput.getDOMNode().value}&entity=${this.refs.selectInput.getDOMNode().value}&callback=cb`;

@@ -13,7 +13,7 @@ var ImageComponent = React.createClass({
 var Detail = React.createClass({
   //{this.props.rowData.trackName}
   handleClick: function (data){
-    console.log(data);
+    //console.log(data);
   },
   render(){
     return (
@@ -26,8 +26,8 @@ var Detail = React.createClass({
 var App = React.createClass({
   getInitialState () {
     return {
-      //data: ''
-
+      data: ''
+/*
       data: [
         {
           "PUBLISHER": "pub",
@@ -73,8 +73,8 @@ var App = React.createClass({
           "Horn 1", "Drums", "Bass", "Flute 1", "Flute 2", "Guitar 1", "Guitar 2", "Oboe", "Accordian"
         ]
       }
-      */
-      ]
+
+      ]*/
     }
 
   },
